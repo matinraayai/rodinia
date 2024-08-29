@@ -14,7 +14,7 @@
 #include <string.h>
 #include <math.h>
 #include "helper_cuda.h"
-#include <cuda_gl_interop.h>
+#include <hip/hip_gl_interop.h>
 #include "bucketsort.cuh"
 // includes, kernels
 #include "bucketsort_kernel.cu"

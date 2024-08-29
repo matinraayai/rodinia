@@ -1,6 +1,7 @@
 #ifndef __MERGESORT
 #define __MERGESORT
 
+#include <hip/amd_detail/amd_hip_vector_types.h>
 #include "bucketsort.cuh"
 
 float4 *runMergeSort(int listsize, int divisions, 
