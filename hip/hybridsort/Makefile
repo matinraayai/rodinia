@@ -17,4 +17,4 @@ hybridsort: main.cu  bucketsort.cu bucketsort.cuh bucketsort_kernel.cu histogram
 
 
 clean:
-	rm	*.o hybridsort
+	rm *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.o hybridsort

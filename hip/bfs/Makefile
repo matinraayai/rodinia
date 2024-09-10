@@ -17,4 +17,4 @@ $(OBJ): $(SRC)
 
 
 clean: $(SRC)
-	rm -f $(EXE) $(EXE).linkinfo result.txt *.o
+	rm -f $(EXE) $(EXE).linkinfo result.txt *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o

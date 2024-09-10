@@ -41,4 +41,4 @@ imagenet.o: imagenet.c backprop.h
 
 
 clean:
-	rm -f *.o *~ backprop backprop_cuda.linkinfo
+	rm -f *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o *~ backprop backprop_cuda.linkinfo

@@ -18,4 +18,4 @@ clang: $(SRC)
 		-L/usr/local/cuda/lib64 -lcudart_static -ldl -lrt -pthread -DTIMING
 
 clean:
-	rm gaussian *.o
+	rm gaussian *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o

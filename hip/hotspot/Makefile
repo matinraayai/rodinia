@@ -24,4 +24,4 @@ debugenum: $(SRC)
 	$(NVCC) $(KERNEL_DIM) -g -deviceemu $(SRC) -o $(EXE) -I$(INCLUDE) -L$(CUDA_LIB_DIR) 
 
 clean: $(SRC)
-	rm -f $(EXE) $(EXE).linkinfo result.txt *.o
+	rm -f $(EXE) $(EXE).linkinfo result.txt *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o
