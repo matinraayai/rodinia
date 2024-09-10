@@ -17,4 +17,4 @@ $(OBJ): $(SRC)
 
 # delete all object files
 clean:
-	rm *.o srad
+	rm *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o srad

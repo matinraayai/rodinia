@@ -25,5 +25,5 @@ $(EXECUTABLE): $(COBJS) $(CXXOBJS) $(CUOBJS)
 	$(LINKER) -o $(EXECUTABLE) $(COBJS) $(CXXOBJS) $(CUOBJS) $(LINKER_FLAGS)
 
 clean:
-	rm -f $(COBJS) $(CXXOBJS) $(CUOBJS) $(EXECUTABLE)
+	rm -f $(COBJS) $(CXXOBJS) $(CUOBJS) $(EXECUTABLE) *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out 
 

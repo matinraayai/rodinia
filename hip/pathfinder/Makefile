@@ -27,4 +27,4 @@ debugenum:
 	$(CC) -g -deviceemu $(SRC) -o $(EXE) -I$(INCLUDE) -L$(CUDA_LIB_DIR) 
 
 clean:
-	rm -f $(EXE) $(OBJ)
+	rm -f $(EXE) $(OBJ) *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o

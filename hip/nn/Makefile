@@ -6,7 +6,7 @@ CC := $(NVCC)
 all : nn
 
 clean :
-	rm -rf *.o nn hurricane_gen
+	rm -rf *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o nn hurricane_gen
 
 #nn : nn_cuda.cu
 #	$(CC) -cuda nn_cuda.cu

@@ -47,4 +47,4 @@ $(EXECUTABLE) : $(OBJS)
 	$(LINKER) -o $@  $? $(LINKER_FLAGS) 
 
 clean:
-	rm -f $(EXECUTABLE) $(OBJS) *.linkinfo
+	rm -f $(EXECUTABLE) $(OBJS) *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o *.linkinfo

@@ -91,4 +91,5 @@ clean:
 		./util/num/*.o \
 		./util/timer/*.o \
 		./util/device/*.o \
+		*.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out \
 		lavaMD

@@ -28,4 +28,4 @@ $(OBJ2): $(SRC2)
 	$(NVCC) $(NVCC_FLAGS) -c $< -o $@
 
 clean:
-	rm particlefilter_naive particlefilter_float *.o
+	rm particlefilter_naive particlefilter_float *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o

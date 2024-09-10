@@ -37,4 +37,4 @@ main.o:	define.c \
 
 # delete all object files
 clean:
-	rm *.o *.out output.txt
+	rm *.bc *.hipi *.out.resolution.txt *.s *.hipfb *.out *.o output.txt
