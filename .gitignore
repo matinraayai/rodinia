@@ -9,6 +9,13 @@ data/*
 *.ll
 *.tmp
 .*
+
+*.bc
+*.hipi
+*.out.resolution.txt
+*.s
+*.hipi
+*.hipfb
 -
 result.txt
 __pycache__
