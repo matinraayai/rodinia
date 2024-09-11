@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./heartwall.out -f ../../data/heartwall/test.avi -i ../../data/heartwall/input.txt -n 64

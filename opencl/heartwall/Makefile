@@ -21,7 +21,7 @@ endif
 OCL_INC_DIR = -I$(OPENCL_INC)
 OCL_LIB_DIR = -L$(OPENCL_LIB)
 
-C_C = gcc
+C_C = gcc $(OCL_INC_DIR)
 OCL_LIB = -lOpenCL
 
 EXE = heartwall.out
