@@ -39,7 +39,8 @@ BINNAME    ?= mummergpu
 INCLUDES  += -I. -I$(CUDA_INSTALL_PATH)/include 
 
 # Libs
-LIB       := -L$(CUDA_LIB_DIR) -L$(LIBDIR) -lcuda -lcudart -lGL -lGLU ${LIB}
+# LIB       := -L$(CUDA_LIB_DIR) -L$(LIBDIR) -lcuda -lcudart -lGL -lGLU ${LIB}
+LIB       := -L$(CUDA_LIB_DIR) -L$(LIBDIR) -lamdhip64 -lhiprtc -lGL -lGLU ${LIB}
 
 # Warning flags
 CXXWARN_FLAGS := \
@@ -75,7 +76,7 @@ CFLAGS    := $(CC_FLAGS)
 CXXFLAGS += -std=c++98
 
 # Common flags
-COMMONFLAGS ?=
+COMMONFLAGS := -I$(OMP_DIR) -std=c++11 
 #COMMONFLAGS += $(INCLUDES) -DUNIX
 
 # Debug/release configuration

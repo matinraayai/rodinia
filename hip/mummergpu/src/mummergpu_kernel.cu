@@ -580,7 +580,7 @@ __device__ void printNode(int nodeid
   char leafchar = cd.leafchar;
 
 
-  XPRINTF("%d\t"fNID"\t%d\t%d\t%d\t%d\t"fNID"\t"fNID"\t"fNID"\t"fNID"\t"fNID"\t"fNID"\t"fNID"\n",
+  XPRINTF("%d\t" fNID"\t%d\t%d\t%d\t%d\t" fNID"\t" fNID"\t" fNID"\t" fNID"\t" fNID"\t" fNID"\t" fNID"\n",
           nodeid, NID(addr), start, end, depth, leafchar, 
           NID(a), NID(c), NID(g), NID(t), NID(d), NID(p), NID(s));
 }
@@ -658,7 +658,7 @@ __device__ void set_result(unsigned int cur,
 #if VERBOSE
     _PixelOfNode nd; nd.data = GETNODE(cur, false);
 
-    XPRINTF("  saving match cur=%d "fNID" len=%d edge_match=%d depth=%d\n",
+    XPRINTF("  saving match cur=%d " fNID" len=%d edge_match=%d depth=%d\n",
             result->data.x, NID(cur), qry_match_len, edge_match_length, MKI(nd.depth));
 
 #endif
@@ -753,7 +753,7 @@ mummergpuKernel(void* match_coords,
 
         char c = GETQCHAR(qrystart + qry_match_len);
 
-        XPRINTF("In node ("fNID"): starting with %c [%d] =>  \n",
+        XPRINTF("In node (" fNID"): starting with %c [%d] =>  \n",
                 NID(cur), c, qry_match_len);
 
         int refpos = 0;
@@ -776,7 +776,7 @@ mummergpuKernel(void* match_coords,
 			
 			arrayToAddress(next, cur);
 				
-            XPRINTF(" In node: ("fNID")\n", NID(cur));
+            XPRINTF(" In node: (" fNID")\n", NID(cur));
 
             // No edge to follow out of the node
             if (cur == 0) {
@@ -852,7 +852,7 @@ NEXT_SUBSTRING:
 			node.data = GETNODEHIST(prev, false);
 	        arrayToAddress(node.suffix, cur);
 		}
-        //XPRINTF(" following suffix link. mustmatch:%d qry_match_len:%d sl:("fNID")\n",
+        //XPRINTF(" following suffix link. mustmatch:%d qry_match_len:%d sl:(" fNID")\n",
         //       mustmatch, qry_match_len, NID(cur));
         do {} while (0);
     }
@@ -1096,7 +1096,7 @@ printKernel(MatchInfo * matches,
   _PixelOfNode node;
   node.data = GETNODE(cur, true);
   
-  XPRINTF("starting node: %d "fNID" depth: %d\n", matches[matchid].matchnode, NID(cur), MKI(node.depth));
+  XPRINTF("starting node: %d " fNID" depth: %d\n", matches[matchid].matchnode, NID(cur), MKI(node.depth));
 
   while (MKI(node.depth) > min_match_length)
   {
@@ -1104,7 +1104,7 @@ printKernel(MatchInfo * matches,
     arrayToAddress(node.parent, cur);
     node.data = GETNODE(cur, true);
 
-    XPRINTF("par: "fNID" depth: %d\n", NID(cur), MKI(node.depth));
+    XPRINTF("par: " fNID" depth: %d\n", NID(cur), MKI(node.depth));
   }
 
   
@@ -1112,7 +1112,7 @@ printKernel(MatchInfo * matches,
   unsigned int badParent = cur;
   cur = printParent;
   
-  XPRINTF(" printParent: "fNID"\n", NID(printParent));
+  XPRINTF(" printParent: " fNID"\n", NID(printParent));
   
   char curchild = 'A';
   bool forceToParent = false;
@@ -1144,7 +1144,7 @@ printKernel(MatchInfo * matches,
     children.data = GETCHILDREN(cur, true);
     char isLeaf = children.leafchar;
 
-    XPRINTF(" cur: "fNID" curchild: %c isLeaf:%d forceToParent:%d\n", 
+    XPRINTF(" cur: " fNID" curchild: %c isLeaf:%d forceToParent:%d\n", 
             NID(cur), curchild, isLeaf, forceToParent);
 
     if (isLeaf || forceToParent)

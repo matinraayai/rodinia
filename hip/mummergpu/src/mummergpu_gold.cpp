@@ -329,7 +329,7 @@ int kernel_gold(int qryid,
 
 	        char c = GETQCHAR(qrystart + qry_match_len);
 
-	        XPRINTF("In node ("fNID"): starting with %c [%d] =>  \n",
+	        XPRINTF("In node (" fNID"): starting with %c [%d] =>  \n",
 	                NID(cur), c, qry_match_len);
 
 	        unsigned int refpos = 0;
@@ -352,7 +352,7 @@ int kernel_gold(int qryid,
 
 				//arrayToAddress(next, cur);
 
-	            XPRINTF(" In node: ("fNID")\n", NID(cur));
+	            XPRINTF(" In node: (" fNID")\n", NID(cur));
 
 	            // No edge to follow out of the node
 	            if (cur == 0) {
